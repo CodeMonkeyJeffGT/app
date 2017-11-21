@@ -2,7 +2,7 @@
 
 <!-- TOC -->
 
-- [1. HelloApp-V1.0-API](#1-helloapp-v10-api-)
+- [1. HelloApp-V1.0-API](#1-helloapp-v10-api)
   - [1.1. tips](#11-tips)
   - [1.2. 动态页](#12-动态页)
     - [1.2.1. 获取动态](#121-获取动态)
