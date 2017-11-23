@@ -5,7 +5,6 @@ class DynamicsPagesController extends ApiController {
 
     public function index($id = 0)
     {
-        $data = I('param.');
     	switch ($this->_method)
     	{
     		case 'get':

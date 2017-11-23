@@ -3,9 +3,8 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class DynamicsController extends ApiController {
 
-    public function index($id = 0){
-
-        $data = I('param.');
+    public function index($id = 0)
+    {
         switch ($this->_method)
         {
             case 'get':

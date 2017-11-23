@@ -3,15 +3,13 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class LoginController extends ApiController {
 
-	protected $check_token = false;
-
     public function index()
     {
         $data = I('param.');
     	switch ($this->_method)
         {
             case 'post':
-                $this->login($data);
+                $this->login($this->data);
                 break;
             
             default:
@@ -68,7 +66,7 @@ class LoginController extends ApiController {
         $this->restReturn(array(
             'code'    => 0,
             'message' => '登录成功',
-            'data'    => true
+            'data'    => $this->data['user']
         ));
     }
 }

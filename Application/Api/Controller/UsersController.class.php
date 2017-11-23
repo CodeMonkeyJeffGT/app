@@ -5,7 +5,6 @@ class UsersController extends ApiController {
 
     public function index()
     {
-        $data = I('param.');
     	switch ($this->_method)
         {
             case 'get':

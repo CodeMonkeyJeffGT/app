@@ -6,15 +6,13 @@ class CommentsController extends ApiController {
     public function index($id = 0)
     {
         if(empty($this->id))
-        {
             $this->restReturn(array(
                 'code'    => 1,
                 'message' => '请指定操作id',
                 'data'    => null
             ));
-        }
-        switch ($this->_method)
-        {
+    	switch ($this->_method)
+    	{
             case 'get':
                 $this->listComment($this->id);
                 break;
@@ -27,14 +25,14 @@ class CommentsController extends ApiController {
                 $this->delComment($this->id);
                 break;
             
-            default:
-                $this->restReturn(array(
-                    'code'    => 1,
-                    'message' => '请求方式错误',
-                    'data'    => null
-                ));
-                break;
-        }
+    		default:
+    			$this->restReturn(array(
+					'code'    => 1,
+					'message' => '请求方式错误',
+					'data'    => null
+    			));
+    			break;
+    	}
     }
 
     private function listComment($d_id){
@@ -73,7 +71,7 @@ class CommentsController extends ApiController {
         }
         $comment = M('comment')->add(array(
             'd_id'    => $d_id,
-            'u_id'    => $this->payload['user']['id'],
+            'u_id'    => $this->data['user']['id'],
             'content' => $data['content'],
             'p_id'    => $data['p_content']
         ));
@@ -94,7 +92,7 @@ class CommentsController extends ApiController {
                 'data'    => false
             ));
         }
-        M('comment')->where('id = %d', $id)
+        M('comment')->where('id = %d', $d_id)
             ->save(array(
                 'content' => '--此评论已被删除--',
                 'u_id'    => 0

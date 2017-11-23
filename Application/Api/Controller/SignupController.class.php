@@ -7,11 +7,10 @@ class SignupController extends ApiController {
 
     public function index()
     {
-        $data = I('param.');
     	switch ($this->_method)
     	{
     		case 'post':
-                $this->signup($data);
+                $this->signup($this->data);
     			break;
     		
     		default:
@@ -31,7 +30,7 @@ class SignupController extends ApiController {
             $this->restReturn(array(
                 'code'    => 1,
                 'message' => '账号不能为空',
-                'data'    => false
+                'data'    => null
             ));
         }
         if(empty($data['password']))
@@ -39,7 +38,7 @@ class SignupController extends ApiController {
             $this->restReturn(array(
                 'code'    => 1,
                 'message' => '密码不能为空',
-                'data'    => false
+                'data'    => null
             ));
         }
         if(empty($data['nick']))
@@ -56,7 +55,7 @@ class SignupController extends ApiController {
             $this->restReturn(array(
                 'code'    => 1,
                 'message' => '账号已存在',
-                'data'    => false
+                'data'    => null
             ));
         }
         $user = M('user')->add(array(
@@ -74,7 +73,7 @@ class SignupController extends ApiController {
         $this->restReturn(array(
             'code'    => 0,
             'message' => '注册成功',
-            'data'    => $user
+            'data'    => $this->data['user']
         ));
     }
 }
