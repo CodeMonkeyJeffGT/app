@@ -27,18 +27,18 @@ return array(
         'transToken'   => 'Api/UserControl/transToken',     //解释token的payload
 
         /* 用户 */
-        'users'        => 'Api/Users/index',                //用户信息
-        'follows'      => 'Api/Follows/index',              //关注管理
+        'users'        => 'Api/Users/index',                //用户信息#
+        'follows'      => 'Api/Follows/index',              //关注管理#
 
         /* 动态 */
-        'dynamics'     => 'Api/Dynamics/index',             //动态管理
-        'dynamicLike'  => 'Api/DynamicLike/index',          //动态点赞
-        'comments'     => 'Api/Comments/index',             //评论管理
-        'commentLike'  => 'Api/CommentLike/index',          //评论点赞
-        'pics'         => 'Api/Pics/index',                 //图片管理
+        'dynamics'     => 'Api/Dynamics/index',             //动态管理#
+        'dynamicLike'  => 'Api/DynamicLike/index',          //动态点赞#
+        'comments'     => 'Api/Comments/index',             //评论管理#
+        'commentLike'  => 'Api/CommentLike/index',          //评论点赞#
+        'pics'         => 'Api/Pics/index',                 //图片管理#
 
         /* 聊条记录 */
-        'chatHistory'  => 'Api/ChatHistory/index',          //聊天记录
+        'chatHistory'  => 'Api/ChatHistory/index',          //聊天记录#
 
         /* 地图 */
         //TODO...

@@ -1,8 +1,12 @@
 <?php
 namespace Api\Controller;
 use Api\Common\ApiController;
-class UserControlController extends ApiController {
 
+/**
+ * 用户管理
+ * @author 谷田 11.23
+ */
+class UserControlController extends ApiController {
     public function __construct()
     {
         parent::__construct();
@@ -16,9 +20,12 @@ class UserControlController extends ApiController {
         }
     }
 
+    /**
+     * 登陆
+     */
     public function login()
     {
-        $data = $this->data();
+        $data = $this->data;
         if(empty($data['username']))
         {
             $this->restReturn(array(
@@ -53,6 +60,7 @@ class UserControlController extends ApiController {
             ));
         }
         
+        //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user['id'],
             'nick'       => $user['nick'],
@@ -65,9 +73,12 @@ class UserControlController extends ApiController {
         ));
     }
 
+    /**
+     * 注册
+     */
     public function signup()
     {
-        $data = $this->data();
+        $data = $this->data;
         if(empty($data['username']))
         {
             $this->restReturn(array(
@@ -108,6 +119,7 @@ class UserControlController extends ApiController {
             'headimgurl' => $data['headImgUrl'],
         ));
         
+        //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user,
             'nick'       => $data['nick'],
@@ -120,9 +132,12 @@ class UserControlController extends ApiController {
         ));
     }
 
-    public function checkToken()
+    /**
+     * 解释token
+     */
+    public function transToken()
     {
-        if( ! parent::__checkToken())
+        if( ! $this->checkToken())
             $this->goLogin();
         $this->restReturn(array(
             'code'    => 0,

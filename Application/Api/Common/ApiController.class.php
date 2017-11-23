@@ -8,7 +8,6 @@ class ApiController extends RestController {
 
     //token有效时长，默认为7d
     protected $expire_dor  = 7 * 86400;
-
     //token的header
     protected $header      = '';
     //token的payload
@@ -19,12 +18,15 @@ class ApiController extends RestController {
     //url中指定的id
     protected $id          = 0;
 
+    //是否验证过token
+    private $checked = false;
+
     public function __construct()
     {
     	parent::__construct();
         date_default_timezone_set('PRC');
         header('Access-Control-Allow-Origin:*');
-        header('Access-Control-Allow-Headers:X-Requested-With');
+        header('Access-Control-Allow-Headers:authorization, Origin, X-Requested-With, Content-Type, Accept');
         header('Access-Control-Allow-Methods:PUT,POST,GET,DELETE,OPTIONS');
         header('X-Powered-By: 3.2.1');
 
@@ -46,6 +48,13 @@ class ApiController extends RestController {
 
     protected function checkToken()
     {
+        //如果验证过，无需再验证
+        if($this->checked)
+        {
+            return ( ! empty($this->payload));
+        }
+
+        $this->checked = true;
     	//获取token并验证有效性
     	$token = I('server.Authorization');
     	if(empty($token) || count($token = explode('.', $token)) !== 3)
@@ -104,9 +113,16 @@ class ApiController extends RestController {
             $signature = hash_hmac('sha256', $prev, $this->secret);
             $data['Authorization'] = $prev . '.' . $signature;
         }
+        $data['user'] = $this->payload['user'];
+
+        //将图片地址、url变为静态完整url
         full_url($data, 'headImgUrl');
         full_url($data, 'url');
-        
+        $data = null_to_zero($data);
+        $data = html_escape($data);
+
+        //测试阶段船payload
+        $data['payload'] = $this->data;
     	$this->response($data, $this->_type);
     }
 

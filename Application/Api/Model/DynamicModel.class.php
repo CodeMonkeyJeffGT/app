@@ -9,12 +9,159 @@ class DynamicModel extends Model {
         	->find();
     }
 
-    public function listDynamics($last_id, $limit = 20)
+    public function listDynamics($id, $last_id, $limit = 20)
     {
-    	return $this->where('id < %d', $last_id)
-    		->order('id DESC')
-    		->limit($limit)
-    		->select();
+        $offset = 0;
+        $hasMore = 1;
+        $dynamics = array();
+
+        $now = time();
+        $nowDay = (int)(strtotime(date('Y-m-d 00:00:00', time())) / 86400);
+
+        $sql = '
+            SELECT `d`.`id` `id`, `user`.`headimgurl` `head_img_url`, `user`.`nick` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT 1 `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = %d
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            ' . ($last_id == 0 ? '' : 'WHERE `id` < %d AND `id` > %d') . '
+            ORDER BY `id` DESC
+            ' . ($last_id == 0 ? 'LIMIT %d' : '') . '
+        ';
+
+        do{
+
+            $last_count = count($dynamics);
+
+            if($last_id == 0)
+                $sqlData = $this->query($sql, $id, $limit * 6);
+            else
+                $sqlData = $this->query($sql, $id, $last_id, $last_id - $limit * 1.5);
+            $sqlData = line_to_up($sqlData);
+
+            $tmpDy = $sqlData[0];
+            if(empty($tmpDy['imgId']))
+                $tmpDy['img'] = array();
+            else
+            {
+                $tmpDy['img'] = array(array(
+                    'id' => $tmpDy['imgId'],
+                    'url' => $tmpDy['imgUrl']
+                ));
+            }
+            unset($tmpDy['imgId']);
+            unset($tmpDy['imgUrl']);
+            for($i = 1, $len = count($sqlData); $i < $len; $i++)
+            {
+                if($tmpDy['id'] != $sqlData[$i]['id'])
+                {
+                    $dynamics[] = $tmpDy;
+                    $tmpDy = $sqlData[$i];
+                    if(empty($tmpDy['imgId']))
+                        $tmpDy['img'] = array();
+                    else
+                    {
+                        $tmpDy['img'] = array(array(
+                            'id' => $tmpDy['imgId'],
+                            'url' => $tmpDy['imgUrl']
+                        ));
+                    }
+                    unset($tmpDy['imgId']);
+                    unset($tmpDy['imgUrl']);
+                }
+                else
+                {
+                    $tmpDy['img'][] = array(
+                        'id' => $sqlData[$i]['imgId'],
+                        'url' => $sqlData[$i]['imgUrl']
+                    );
+                }
+            }
+            if( ! empty($tmpDy))
+                $dynamics[] = $tmpDy;
+
+            $dynamics = array_slice($dynamics, 0, -1);
+
+            if(empty($dynamics))
+                break;
+
+            $offset = $dynamics[count($dynamics) - 1]['id'];
+
+        }while(count($dynamics) <= $limit && $last_count == count($dynamics));
+
+        if(count($dynamics) > $limit)
+        {
+            $dynamics = array_slice($dynamics, 0, -1);
+            $dynamics = array_slice($dynamics, 0, $limit);
+            $offset = $dynamics[$limit - 1];
+        }
+        else
+        {
+            $hasMore = 0;
+        }
+
+        for($i = 0, $len = count($dynamics); $i < $len; $i++)
+        {
+            $tmpTime = $dynamics[$i]['pubTime'];
+            $tmpPubTime = date('Y-m-d H:i:s', $tmpTime);
+            if($now - $tmpTime < 60)
+            {
+                $tmpPubTime = '刚刚';
+            }
+            else if($now - $tmpTime < 3600)
+            {
+                $tmpPubTime = floor(($now - $tmpTime) / 60) . '分钟前';
+            }
+            else if((int)(strtotime(date('Y-m-d 00:00:00', $tmpTime)) / 86400) == $nowDay)
+            {
+                $tmpPubTime = floor(($now - $tmpTime) / 3600) . '小时前';
+            }
+            else if($nowDay - (int)(strtotime(date('Y-m-d 00:00:00', $tmpTime)) / 86400)  == 1)
+            {
+                $tmpPubTime = '昨天 ' . date('H:i', $tmpTime);
+            }
+            else if(date('Y', $tmpTime) == date('Y'))
+            {
+                $tmpPubTime = date('m-d H:i', $tmpTime);
+            }
+            else
+            {
+                $tmpPubTime = substr($tmpPubTime, 2);
+            }
+            $dynamics[$i]['pubTime'] = $tmpPubTime;
+
+            $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 30);
+            $dynamics[$i]['isWhole'] = ($dynamics[$i]['brief'] == $dynamics[$i]['content']) ? 1 : 0;
+            unset($dynamics[$i]['content']);
+        }
+
+        return array(
+            'dynamics' => $dynamics,
+            'offset'   => $offset,
+            'hasMore'  => $hasMore
+        );
+    }
+
+    public function listFollowDynamics($id, $last_id, $limit = 20)
+    {
+        return $this->where('id < %d AND u_id = %d', $last_id,  $id)
+            ->order('id DESC')
+            ->limit((int)$limit)
+            ->select();
     }
 
 }
