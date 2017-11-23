@@ -5,10 +5,18 @@ class UsersController extends ApiController {
 
     public function index()
     {
+        if( ! $this->checkToken())
+        {
+            $this->goLogin();
+        }
+
     	switch ($this->_method)
         {
             case 'get':
-                $this->search($data);
+                if(empty($this->id))
+                    $this->search($this->data);
+                else
+                    $this->getUser($this->id);
                 break;
             
             default:
@@ -19,5 +27,15 @@ class UsersController extends ApiController {
                 ));
                 break;
         }
+    }
+
+    private function search($data)
+    {
+
+    }
+
+    private function getUser($id)
+    {
+
     }
 }

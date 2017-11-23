@@ -3,15 +3,21 @@ namespace Api\Common;
 use Think\Controller\RestController;
 class ApiController extends RestController {
 
-	private $secret = 'jo0iUPHOJDFPJ90u9F9jpojFEUJ3';  //全局secret，部署状态下勿修改
+    //全局secret，部署状态下勿修改
+	private $secret = 'jo0iUPHOJDFPJ90u9F9jpojFEUJ3';
 
-    protected $expire_dor  = 7 * 86400; //token有效时长，默认为7d
+    //token有效时长，默认为7d
+    protected $expire_dor  = 7 * 86400;
 
-    protected $header      = '';        //token的header
-    protected $payload     = array();   //token的payload
+    //token的header
+    protected $header      = '';
+    //token的payload
+    protected $payload     = array();
 
-    protected $data        = array();   //res.body方式的数据
-    protected $id          = 0;         //url中指定的id
+    //参数数组
+    protected $data        = array();
+    //url中指定的id
+    protected $id          = 0;
 
     public function __construct()
     {
@@ -23,7 +29,9 @@ class ApiController extends RestController {
         header('X-Powered-By: 3.2.1');
 
         $this->id   = (int)I('get.id', 0);
-        switch ($this->_method) {
+        unset($_GET['id']);
+        switch ($this->_method)
+        {
             case 'get':
                 $this->data = I('get.');
                 break;
@@ -32,6 +40,8 @@ class ApiController extends RestController {
                 $this->data = json_decode(@file_get_contents('php://input'), true);
                 break;
         }
+        //利用checkToken方法填充header和payload
+        $this->checkToken();
     }
 
     protected function checkToken()
@@ -94,6 +104,9 @@ class ApiController extends RestController {
             $signature = hash_hmac('sha256', $prev, $this->secret);
             $data['Authorization'] = $prev . '.' . $signature;
         }
+        full_url($data, 'headImgUrl');
+        full_url($data, 'url');
+        
     	$this->response($data, $this->_type);
     }
 
