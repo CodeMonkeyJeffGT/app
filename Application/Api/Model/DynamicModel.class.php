@@ -3,13 +3,7 @@ namespace Api\Model;
 use Think\Model;
 class DynamicModel extends Model {
 
-    public function getDynamic($id)
-    {
-        return $this->where('id = %d', $id)
-        	->find();
-    }
-
-    public function listDynamics($id, $last_id, $limit = 20)
+    public function listDynamics($u_id, $last_id, $limit = 20)
     {
         $offset = 0;
         $hasMore = 1;
@@ -38,7 +32,7 @@ class DynamicModel extends Model {
                 FROM `dynamic_like`
                 WHERE `u_id` = %d
             ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
-            ' . ($last_id == 0 ? '' : 'WHERE `id` < %d AND `id` > %d') . '
+            WHERE u_id <> 0' . ($last_id == 0 ? '' : ' AND `d`.`id` < %d AND `d`.`id` > %d') . '
             ORDER BY `id` DESC
             ' . ($last_id == 0 ? 'LIMIT %d' : '') . '
         ';
@@ -48,9 +42,9 @@ class DynamicModel extends Model {
             $last_count = count($dynamics);
 
             if($last_id == 0)
-                $sqlData = $this->query($sql, $id, $limit * 6);
+                $sqlData = $this->query($sql, $u_id, $limit * 6);
             else
-                $sqlData = $this->query($sql, $id, $last_id, $last_id - $limit * 1.5);
+                $sqlData = $this->query($sql, $u_id, $last_id, $last_id - $limit * 1.5);
             $sqlData = line_to_up($sqlData);
 
             $tmpDy = $sqlData[0];
@@ -156,12 +150,88 @@ class DynamicModel extends Model {
         );
     }
 
-    public function listFollowDynamics($id, $last_id, $limit = 20)
+    // public function listFollowDynamics($id, $last_id, $limit = 20)
+    // {
+    //     return $this->where('id < %d AND u_id = %d', $last_id,  $id)
+    //         ->order('id DESC')
+    //         ->limit((int)$limit)
+    //         ->select();
+    // }
+     
+    public function getDynamic($u_id, $id)
     {
-        return $this->where('id < %d AND u_id = %d', $last_id,  $id)
-            ->order('id DESC')
-            ->limit((int)$limit)
-            ->select();
+        $sql = '
+            SELECT `d`.`id` `id`, `user`.`headimgurl` `head_img_url`, `user`.`nick` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT 1 `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = %d
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = %d;
+        ';
+        $sqlData = $this->query($sql, $u_id, $id);
+        if(count($sqlData) == 0)
+            return 0;
+
+        $sqlData = line_to_up($sqlData);
+
+        $dynamic = $sqlData[0];
+        unset($dynamic['imgId']);
+        unset($dynamic['imgUrl']);
+        $dynamic['img'] = array();
+        for($i = 0, $len = count($sqlData); $i < $len; $i++)
+        {
+            if( ! empty($sqlData[$i]['imgId']))
+                $dynamic['img'][] = array(
+                    'id' => $sqlData[$i]['imgId'],
+                    'url' => $sqlData[$i]['imgUrl']
+                );
+        }
+
+        $now = time();
+        $nowDay = (int)(strtotime(date('Y-m-d 00:00:00', time())) / 86400);
+        $tmpTime = $dynamic['pubTime'];
+        $tmpPubTime = date('Y-m-d H:i:s', $tmpTime);
+        if($now - $tmpTime < 60)
+        {
+            $tmpPubTime = '刚刚';
+        }
+        else if($now - $tmpTime < 3600)
+        {
+            $tmpPubTime = floor(($now - $tmpTime) / 60) . '分钟前';
+        }
+        else if((int)(strtotime(date('Y-m-d 00:00:00', $tmpTime)) / 86400) == $nowDay)
+        {
+            $tmpPubTime = floor(($now - $tmpTime) / 3600) . '小时前';
+        }
+        else if($nowDay - (int)(strtotime(date('Y-m-d 00:00:00', $tmpTime)) / 86400)  == 1)
+        {
+            $tmpPubTime = '昨天 ' . date('H:i', $tmpTime);
+        }
+        else if(date('Y', $tmpTime) == date('Y'))
+        {
+            $tmpPubTime = date('m-d H:i', $tmpTime);
+        }
+        else
+        {
+            $tmpPubTime = substr($tmpPubTime, 2);
+        }
+        $dynamic['pubTime'] = $tmpPubTime;
+
+        return $dynamic;
     }
 
 }

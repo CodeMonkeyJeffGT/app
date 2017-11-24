@@ -42,5 +42,8 @@ return array(
 
         /* 地图 */
         //TODO...
+        
+        /* DEBUG */
+        'debug' => 'Api/Dynamics/debug'
     )
 );

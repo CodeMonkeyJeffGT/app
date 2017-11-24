@@ -68,20 +68,20 @@ class DynamicsController extends ApiController {
         $offset = isset($data['offset']) ? $data['offset'] : 0;
         $limit  = isset($data['limit']) ? $data['limit'] : 20;
 
-        $id     = 0;
+        $u_id     = 0;
         if($type == 'like')
         {
             if( ! $this->checkToken())
                 $this->goLogin();
-            $id = $payload['user']['id'];
+            $u_id = $payload['user']['id'];
         }
         else
         {
             if($this->checkToken())
-                $id = $payload['user']['id'];
+                $u_id = $payload['user']['id'];
         }
 
-        $dynamics = $this->dynamics->listDynamics($id, $offset, $limit);
+        $dynamics = $this->dynamics->listDynamics($u_id, $offset, $limit);
         $this->restReturn(array(
             'code'    => 0,
             'message' => '',
@@ -91,21 +91,117 @@ class DynamicsController extends ApiController {
 
     private function getDs($id)
     {
+        $u_id     = 0;
+        if($type == 'like')
+        {
+            if( ! $this->checkToken())
+                $this->goLogin();
+            $u_id = $payload['user']['id'];
+        }
+        else
+        {
+            if($this->checkToken())
+                $u_id = $payload['user']['id'];
+        }
 
+        $dynamic = $this->dynamics->getDynamic($u_id, $id);
+        if(empty($dynamic))
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该动态不存在',
+                'data'    => false
+            ));
+        }
+        $this->restReturn(array(
+            'code'    => 0,
+            'message' => '',
+            'data'    => $dynamic
+        ));
     }
 
     private function publish($data)
     {
+        $u_id = $this->payload['user']['id'];
+        $content = $data['content'];
+        $pubTime = time();
 
+        $img = $data['img'];
+        $img = implode(', ', $img);
+        $repeat = M('img')->where('id IN (%s) AND d_id <> 0', $img)->count();
+        if($repeat != 0)
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '图片已被使用，请重新上传',
+                'data'    => false
+            ));
+        }
+
+        $id = $this->dynamics->add(array(
+            'content'  => $content,
+            'u_id'     => $u_id,
+            'pub_time' => $pubTime
+        ));
+
+        $sql = 'UPDATE `img` SET `d_id` = %d WHERE `id` IN (%s)';
+        M()->query($sql, $id, $img);
+        $this->restReturn(array(
+            'code'    => 0,
+            'message' => '发布成功',
+            'data'    => array(
+                'id' => $id
+            )
+        ));
     }
 
-    private function edit($id, $data)
-    {
+    // private function edit($id, $data)
+    // {
+    // }
 
-    }
 
     private function delete($id)
     {
+        if($id == 0)
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '底层数据无法删除',
+                'data'    => false
+            ));
+        }
 
+        $u_id = $this->payload['user']['id'];
+        $dynamic = $this->dynamics->field('u_id')->find($id);
+        if(empty($dynamic))
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该动态不存在',
+                'data'    => false
+            ));
+        if($dynamic['u_id'] == 0)
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该动态已被删除',
+                'data'    => false
+            ));
+        if($dynamic['u_id'] != $u_id)
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '您不是该动态的发布者',
+                'data'    => false
+            ));
+
+        $this->dynamics->where('`id` = %d', $id)->save(array(
+            'u_id'    => 0,
+            'content' => ''
+        ));
+        M('img')->where('d_id = %d', $id)->delete();
+
+        $this->restReturn(array(
+            'code'    => 0,
+            'message' => '删除成功',
+            'data'    => true
+        ));
     }
 }
