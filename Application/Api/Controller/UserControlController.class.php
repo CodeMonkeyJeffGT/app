@@ -63,8 +63,8 @@ class UserControlController extends ApiController {
         //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user['id'],
-            'nick'       => $user['nick'],
-            'headImgUrl' => $user['headimgurl']
+            'nickname'   => $user['nickname'],
+            'headImgUrl' => $user['head_img_url']
         );
         $this->restReturn(array(
             'code'    => 0,
@@ -95,13 +95,13 @@ class UserControlController extends ApiController {
                 'data'    => null
             ));
         }
-        if(empty($data['nick']))
+        if(empty($data['nickname']))
         {
-            $data['nick'] = $data['username'];
+            $data['nickname'] = $data['username'];
         }
         if(empty($data['headImgUrl']))
         {
-            $data['headImgUrl'] = '/headimg/default.png';
+            $data['headImgUrl'] = '/headimg/default.jpg';
         }
         $user = D('user')->getUser($data['username']);
         if( ! empty($user))
@@ -115,14 +115,14 @@ class UserControlController extends ApiController {
         $user = M('user')->add(array(
             'username'   => $data['username'],
             'password'   => md5($data['password']),
-            'nick'       => $data['nick'],
-            'headimgurl' => $data['headImgUrl'],
+            'nickname'   => $data['nickname'],
+            'head_img_url' => $data['headImgUrl'],
         ));
         
         //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user,
-            'nick'       => $data['nick'],
+            'nickname'   => $data['nickname'],
             'headImgUrl' => $data['headImgUrl']
         );
         $this->restReturn(array(

@@ -13,7 +13,7 @@ class DynamicModel extends Model {
         $nowDay = (int)(strtotime(date('Y-m-d 00:00:00', time())) / 86400);
 
         $sql = '
-            SELECT `d`.`id` `id`, `user`.`headimgurl` `head_img_url`, `user`.`nick` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
             FROM `dynamic` `d`
             LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
             LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
@@ -28,7 +28,7 @@ class DynamicModel extends Model {
                 GROUP BY `d_id`
             ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
             LEFT JOIN (
-                SELECT 1 `is`, `d_id`
+                SELECT `id` `is`, `d_id`
                 FROM `dynamic_like`
                 WHERE `u_id` = %d
             ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
@@ -101,7 +101,7 @@ class DynamicModel extends Model {
         {
             $dynamics = array_slice($dynamics, 0, -1);
             $dynamics = array_slice($dynamics, 0, $limit);
-            $offset = $dynamics[$limit - 1];
+            $offset = $dynamics[$limit - 1]['id'];
         }
         else
         {
@@ -141,6 +141,8 @@ class DynamicModel extends Model {
             $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 30);
             $dynamics[$i]['isWhole'] = ($dynamics[$i]['brief'] == $dynamics[$i]['content']) ? 1 : 0;
             unset($dynamics[$i]['content']);
+
+            $dynamics[$i]['isLike'] = empty($dynamics[$i]['isLike']) ? 0 : 1;
         }
 
         return array(
@@ -161,7 +163,7 @@ class DynamicModel extends Model {
     public function getDynamic($u_id, $id)
     {
         $sql = '
-            SELECT `d`.`id` `id`, `user`.`headimgurl` `head_img_url`, `user`.`nick` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
             FROM `dynamic` `d`
             LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
             LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
@@ -176,7 +178,7 @@ class DynamicModel extends Model {
                 GROUP BY `d_id`
             ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
             LEFT JOIN (
-                SELECT 1 `is`, `d_id`
+                SELECT `id` `is`, `d_id`
                 FROM `dynamic_like`
                 WHERE `u_id` = %d
             ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
@@ -230,6 +232,7 @@ class DynamicModel extends Model {
             $tmpPubTime = substr($tmpPubTime, 2);
         }
         $dynamic['pubTime'] = $tmpPubTime;
+        $dynamic['isLike'] = empty($dynamic['isLike']) ? 0 : 1;
 
         return $dynamic;
     }

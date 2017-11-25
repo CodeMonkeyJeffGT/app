@@ -73,12 +73,12 @@ class DynamicsController extends ApiController {
         {
             if( ! $this->checkToken())
                 $this->goLogin();
-            $u_id = $payload['user']['id'];
+            $u_id = $this->payload['user']['id'];
         }
         else
         {
             if($this->checkToken())
-                $u_id = $payload['user']['id'];
+                $u_id = $this->payload['user']['id'];
         }
 
         $dynamics = $this->dynamics->listDynamics($u_id, $offset, $limit);
@@ -96,12 +96,12 @@ class DynamicsController extends ApiController {
         {
             if( ! $this->checkToken())
                 $this->goLogin();
-            $u_id = $payload['user']['id'];
+            $u_id = $this->payload['user']['id'];
         }
         else
         {
             if($this->checkToken())
-                $u_id = $payload['user']['id'];
+                $u_id = $this->payload['user']['id'];
         }
 
         $dynamic = $this->dynamics->getDynamic($u_id, $id);
@@ -123,19 +123,35 @@ class DynamicsController extends ApiController {
     private function publish($data)
     {
         $u_id = $this->payload['user']['id'];
+        if(empty($data['content']))
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '内容不能为空',
+                'data'    => false
+            ));
         $content = $data['content'];
         $pubTime = time();
 
-        $img = $data['img'];
-        $img = implode(', ', $img);
-        $repeat = M('img')->where('id IN (%s) AND d_id <> 0', $img)->count();
-        if($repeat != 0)
-        {
+        if( ! isset($data['img']))
             $this->restReturn(array(
                 'code'    => 1,
-                'message' => '图片已被使用，请重新上传',
+                'message' => '无图片请传空数组(TO开发者)',
                 'data'    => false
             ));
+
+        $img = $data['img'];
+        if( ! empty($img))
+        {
+            $img = implode(', ', $img);
+            $repeat = M('img')->where('id IN (%s) AND d_id != 0', $img)->count();
+            if($repeat != 0)
+            {
+                $this->restReturn(array(
+                    'code'    => 1,
+                    'message' => '图片已被使用，请重新上传',
+                    'data'    => false
+                ));
+            }
         }
 
         $id = $this->dynamics->add(array(
@@ -144,8 +160,11 @@ class DynamicsController extends ApiController {
             'pub_time' => $pubTime
         ));
 
-        $sql = 'UPDATE `img` SET `d_id` = %d WHERE `id` IN (%s)';
-        M()->query($sql, $id, $img);
+        if( ! empty($img))
+        {
+            $sql = 'UPDATE `img` SET `d_id` = %d WHERE `id` IN (%s)';
+            M()->query($sql, $id, $img);
+        }
         $this->restReturn(array(
             'code'    => 0,
             'message' => '发布成功',

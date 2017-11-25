@@ -47,10 +47,12 @@ function html_escape($var)
 		}
 		return $var;
 	}
-	else
+	else if(is_string($var))
 	{
 		return htmlspecialchars($var);
 	}
+	else
+		return $var;
 }
 
 function null_to_zero($var)
@@ -97,4 +99,21 @@ function line_to_up($var)
 		return $var;
 	}
 	return $var;
+}
+
+function numeric_to_num($var)
+{
+	if(is_array($var))
+	{
+		foreach ($var as $key => $value) {
+			$var[$key] = numeric_to_num($value);
+		}
+		return $var;
+	}
+	else
+	{
+		if(is_numeric($var))
+			return (double)$var;
+		return $var;
+	}
 }

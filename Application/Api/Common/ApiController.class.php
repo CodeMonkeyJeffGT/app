@@ -26,7 +26,7 @@ class ApiController extends RestController {
     	parent::__construct();
         date_default_timezone_set('PRC');
         header('Access-Control-Allow-Origin:*');
-        header('Access-Control-Allow-Headers:authorization, Origin, X-Requested-With, Content-Type, Accept');
+        header('Access-Control-Allow-Headers:token, Origin, X-Requested-With, Content-Type, Accept');
         header('Access-Control-Allow-Methods:PUT,POST,GET,DELETE,OPTIONS');
         header('X-Powered-By: 3.2.1');
 
@@ -43,7 +43,6 @@ class ApiController extends RestController {
                 break;
         }
         //利用checkToken方法填充header和payload
-        $this->checkToken();
     }
 
     protected function checkToken()
@@ -56,7 +55,7 @@ class ApiController extends RestController {
 
         $this->checked = true;
     	//获取token并验证有效性
-    	$token = I('server.Authorization');
+    	$token = I('server.HTTP_TOKEN');
     	if(empty($token) || count($token = explode('.', $token)) !== 3)
     	{
     		return false;
@@ -68,16 +67,18 @@ class ApiController extends RestController {
     		return false;
     	}
 
-    	$this->header = json_decode(base64_decode($token[0]), true);
-    	$this->payload = json_decode(base64_decode($token[1]), true);
+    	$this->header = json_decode(base64_decode($this->header), true);
+    	$this->payload = json_decode(base64_decode($this->payload), true);
 
     	if($this->payload['expire'] < time())
     	{
+            $this->payload = array();
     		return false;
     	}
 
     	if( ! isset($this->payload['user']['id']) || ! is_numeric($this->payload['user']['id']))
     	{
+            $this->payload = array();
     		return false;
     	}
         return true;
@@ -95,7 +96,8 @@ class ApiController extends RestController {
 
     protected function restReturn($data)
     {
-        $data['Authorization'] = '';
+        $data['token'] = '';
+        $data['user'] = $this->payload['user'];
         if( ! empty($this->payload))
         {
             //生成token并放入data
@@ -111,17 +113,17 @@ class ApiController extends RestController {
             $this->payload           = base64_encode(json_encode($this->payload));
             $prev                    = $this->header . '.' . $this->payload;
             $signature = hash_hmac('sha256', $prev, $this->secret);
-            $data['Authorization'] = $prev . '.' . $signature;
+            $data['token'] = $prev . '.' . $signature;
         }
-        $data['user'] = $this->payload['user'];
 
         //将图片地址、url变为静态完整url
         full_url($data, 'headImgUrl');
         full_url($data, 'url');
         $data = null_to_zero($data);
         $data = html_escape($data);
+        $data = numeric_to_num($data);
 
-        //测试阶段船payload
+        //测试阶段传payload
         $data['payload'] = $this->data;
     	$this->response($data, $this->_type);
     }
@@ -143,7 +145,7 @@ class ApiController extends RestController {
     //         $this->payload           = base64_encode(json_encode($this->payload));
     //         $prev                    = $this->header . '.' . $this->payload;
     //         $signature = hash_hmac('sha256', $prev, $this->secret);
-    //         header('Authorization:' . $prev . '.' . $signature);
+    //         header('HTTP_TOKEN:' . $prev . '.' . $signature);
     //     }
     //     parent::__destruct();
     // }
