@@ -4,3 +4,15 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
 ERR: 无法加载模块:Dynamic_like
 
+[ 2017-11-25T12:42:34+08:00 ] 127.0.0.1 /comment/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+ERR: 无法加载模块:Comment
+
+[ 2017-11-25T12:43:12+08:00 ] 127.0.0.1 /comment/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+ERR: 无法加载模块:Comment
+

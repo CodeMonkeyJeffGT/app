@@ -5,14 +5,10 @@ class DynamicsController extends ApiController {
 
     private $dynamics;
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->dynamics = D('dynamic');
-    }
-
     public function index($id = 0)
     {
+        $this->dynamics = D('dynamic');
+
         switch ($this->_method)
         {
             case 'get':
@@ -81,7 +77,7 @@ class DynamicsController extends ApiController {
                 $u_id = $this->payload['user']['id'];
         }
 
-        $dynamics = $this->dynamics->listDynamics($u_id, $offset, $limit);
+        $dynamics = $this->dynamics->listDynamics($offset, $limit, $u_id);
         $this->restReturn(array(
             'code'    => 0,
             'message' => '',
@@ -104,12 +100,20 @@ class DynamicsController extends ApiController {
                 $u_id = $this->payload['user']['id'];
         }
 
-        $dynamic = $this->dynamics->getDynamic($u_id, $id);
+        $dynamic = $this->dynamics->getDynamic($id, $u_id);
         if(empty($dynamic))
         {
             $this->restReturn(array(
                 'code'    => 1,
                 'message' => '该动态不存在',
+                'data'    => false
+            ));
+        }
+        if(empty($dynamic['headImgUrl']))
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该动态已被删除',
                 'data'    => false
             ));
         }
@@ -130,14 +134,11 @@ class DynamicsController extends ApiController {
                 'data'    => false
             ));
         $content = $data['content'];
+        $content = base64_encode($content);
         $pubTime = time();
 
         if( ! isset($data['img']))
-            $this->restReturn(array(
-                'code'    => 1,
-                'message' => '无图片请传空数组(TO开发者)',
-                'data'    => false
-            ));
+            $data['img'] = array();
 
         $img = $data['img'];
         if( ! empty($img))

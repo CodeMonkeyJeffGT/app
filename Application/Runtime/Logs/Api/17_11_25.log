@@ -733,3 +733,1584 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
 
+[ 2017-11-25T11:59:34+08:00 ] 127.0.0.1 /transToken
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+
+[ 2017-11-25T11:59:57+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:00:26+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:00:37+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000379s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:00:49+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0156s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "2015214310" ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:01:00+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "gutian" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-25T12:01:03+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0142s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "gutian" ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:01:06+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0157s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "gutian" ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:01:19+08:00 ] 127.0.0.1 /signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "gutian" ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:01:33+08:00 ] 127.0.0.1 /signup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0127s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "admin" ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0039s ]
+SQL: INSERT INTO `user` (`username`,`password`,`nickname`,`head_img_url`) VALUES ('admin','c4ca4238a0b923820dcc509a6f75849b','admin','/headimg/default.jpg') [ RunTime:0.0518s ]
+
+[ 2017-11-25T12:01:43+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0111s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "admin" ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-25T12:01:46+08:00 ] 127.0.0.1 /login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0141s ]
+SQL: SELECT `id`,`password`,`nickname`,`head_img_url` FROM `user` WHERE ( username = "admin" ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:02:08+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0125s ]
+
+[ 2017-11-25T12:02:10+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0119s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0108s ]
+
+[ 2017-11-25T12:02:26+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0126s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0121s ]
+
+[ 2017-11-25T12:02:30+08:00 ] 127.0.0.1 /dynamics/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0132s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 95 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 3;
+         [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:02:36+08:00 ] 127.0.0.1 /dynamics/308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 95 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 308;
+         [ RunTime:0.0006s ]
+
+[ 2017-11-25T12:04:13+08:00 ] 127.0.0.1 /dynamics/308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 91 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 308;
+         [ RunTime:0.0006s ]
+
+[ 2017-11-25T12:04:56+08:00 ] 127.0.0.1 /dynamics/308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0129s ]
+
+[ 2017-11-25T12:05:38+08:00 ] 127.0.0.1 /dynamics/308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0114s ]
+SQL: INSERT INTO `dynamic` (`content`,`u_id`,`pub_time`) VALUES ('我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全','12','1511582738') [ RunTime:0.0419s ]
+
+[ 2017-11-25T12:05:45+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0117s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0141s ]
+
+[ 2017-11-25T12:06:03+08:00 ] 127.0.0.1 /dynamics/37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0108s ]
+SQL: SELECT `u_id` FROM `dynamic` WHERE `id` = 37 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-25T12:06:07+08:00 ] 127.0.0.1 /dynamics/307
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0146s ]
+SQL: SELECT `u_id` FROM `dynamic` WHERE `id` = 307 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:06:13+08:00 ] 127.0.0.1 /dynamics/307
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0099s ]
+SQL: SELECT `u_id` FROM `dynamic` WHERE `id` = 307 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-11-25T12:06:23+08:00 ] 127.0.0.1 /dynamics/307
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0139s ]
+SQL: INSERT INTO `dynamic` (`content`,`u_id`,`pub_time`) VALUES ('我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全','12','1511582783') [ RunTime:0.0690s ]
+
+[ 2017-11-25T12:06:26+08:00 ] 127.0.0.1 /dynamics/307
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0122s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 91 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 307;
+         [ RunTime:0.0008s ]
+
+[ 2017-11-25T12:06:29+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0126s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0113s ]
+
+[ 2017-11-25T12:06:46+08:00 ] 127.0.0.1 /dynamics/310
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0094s ]
+SQL: SELECT `u_id` FROM `dynamic` WHERE `id` = 310 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `dynamic` SET `u_id`='0',`content`='' WHERE ( `id` = 310 ) [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `img` [ RunTime:0.0077s ]
+SQL: DELETE FROM `img` WHERE ( d_id = 310 ) [ RunTime:0.0003s ]
+
+[ 2017-11-25T12:06:48+08:00 ] 127.0.0.1 /dynamics/310
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0135s ]
+SQL: SELECT `u_id` FROM `dynamic` WHERE `id` = 310 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:06:53+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0116s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0133s ]
+
+[ 2017-11-25T12:07:00+08:00 ] 127.0.0.1 /dynamics/310
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0143s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 91 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 310;
+         [ RunTime:0.0007s ]
+
+[ 2017-11-25T12:33:33+08:00 ] 127.0.0.1 /comments/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+
+[ 2017-11-25T12:34:02+08:00 ] 127.0.0.1 /comments/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "1" )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:35:31+08:00 ] 127.0.0.1 /comments
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:35:36+08:00 ] 127.0.0.1 /comments/300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0066s ]
+ERR: Too few arguments to function Api\Model\DynamicModel::getDynamic(), 1 passed in F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php on line 53 and exactly 2 expected
+
+[ 2017-11-25T12:39:44+08:00 ] 127.0.0.1 /comments/300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0098s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0069s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 300;
+         [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 83 行.
+NOTIC: [8] Undefined index: p_content F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 85 行.
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('300',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('300',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+
+[ 2017-11-25T12:40:28+08:00 ] 127.0.0.1 /comments/300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0143s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0078s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 300;
+         [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p_content F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 85 行.
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('300',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('300',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+
+[ 2017-11-25T12:41:55+08:00 ] 127.0.0.1 /comments/300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0114s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 300;
+         [ RunTime:0.0006s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "300" )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:42:03+08:00 ] 127.0.0.1 /dynamics/300
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0111s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 91 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 300;
+         [ RunTime:0.0004s ]
+
+[ 2017-11-25T12:42:07+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0112s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0140s ]
+
+[ 2017-11-25T12:42:24+08:00 ] 127.0.0.1 /dynamics/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0104s ]
+NOTIC: [8] Undefined variable: type F:\XAMPP\htdocs\app\Application\Api\Controller\DynamicsController.class.php 第 91 行.
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+
+[ 2017-11-25T12:43:08+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0072s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:43:16+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0095s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0073s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Common\ApiController.class.php 第 100 行.
+
+[ 2017-11-25T12:43:18+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0093s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0071s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: p_content F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 93 行.
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+ERR: 1048:Column 'u_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309',NULL,'我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+
+[ 2017-11-25T12:43:52+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0101s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0066s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0005s ]
+
+[ 2017-11-25T12:44:17+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0118s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0081s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+
+[ 2017-11-25T13:24:21+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0127s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0080s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0008s ]
+
+[ 2017-11-25T13:24:33+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: user F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0068s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+
+[ 2017-11-25T13:25:04+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-11-25T13:25:44+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-11-25T13:25:52+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0071s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p_content F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 93 行.
+ERR: 1048:Column 'p_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+ERR: 1048:Column 'p_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+
+[ 2017-11-25T13:27:18+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0098s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0067s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: p_content F:\XAMPP\htdocs\app\Application\Api\Controller\CommentsController.class.php 第 95 行.
+ERR: 1048:Column 'p_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+ERR: 1048:Column 'p_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全',NULL)
+
+[ 2017-11-25T13:28:03+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0148s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0094s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+SQL: INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全','0') [ RunTime:0.0393s ]
+
+[ 2017-11-25T13:28:16+08:00 ] 127.0.0.1 /dynamics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0101s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 12
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE u_id <> 0
+            ORDER BY `id` DESC
+            LIMIT 120
+         [ RunTime:0.0120s ]
+
+[ 2017-11-25T13:28:27+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0115s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0074s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0001s ]
+
+[ 2017-11-25T13:28:32+08:00 ] 127.0.0.1 /comments/308
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0127s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0085s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 308;
+         [ RunTime:0.0007s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "308" )  [ RunTime:0.0002s ]
+
+[ 2017-11-25T13:28:34+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0084s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0011s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+
+[ 2017-11-25T13:28:51+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0097s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+SQL: INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全','0') [ RunTime:0.0701s ]
+
+[ 2017-11-25T13:28:52+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0069s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+SQL: INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`) VALUES ('309','12','我突然想发一条特别特别长的动态，以致于这条动态在首页根本显示不全','0') [ RunTime:0.0260s ]
+
+[ 2017-11-25T13:28:54+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0102s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0069s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+
+[ 2017-11-25T13:29:21+08:00 ] 127.0.0.1 /comments/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0118s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 100;
+         [ RunTime:0.0004s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "100" )  [ RunTime:0.0001s ]
+
+[ 2017-11-25T13:29:29+08:00 ] 127.0.0.1 /comments/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `comment` WHERE ( id = 100 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `comment` SET `content`='--此评论已被删除--',`u_id`='0' WHERE ( id = 100 ) [ RunTime:0.0733s ]
+
+[ 2017-11-25T13:29:31+08:00 ] 127.0.0.1 /comments/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `comment` WHERE ( id = 100 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-25T13:30:01+08:00 ] 127.0.0.1 /comments/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `comment` WHERE ( id = 100 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-11-25T13:30:14+08:00 ] 127.0.0.1 /comments/100
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `comment` WHERE ( id = 100 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-11-25T13:30:23+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0104s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0108s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0007s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+
+[ 2017-11-25T19:29:53+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017467s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0092s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0008s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+
+[ 2017-11-25T19:30:00+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0085s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0006s ]
+SQL: INSERT INTO `comment` (`d_id`,`u_id`,`content`,`p_id`,`pub_time`) VALUES ('309','12','5oiR56qB54S25oOz5Y+R5LiA5p2h54m55Yir54m55Yir6ZW/55qE5Yqo5oCB77yM5Lul6Ie05LqO6L+Z5p2h5Yqo5oCB5Zyo6aaW6aG15qC55pys5pi+56S65LiN5YWo','0','1511609400') [ RunTime:0.0740s ]
+
+[ 2017-11-25T19:30:05+08:00 ] 127.0.0.1 /comments/309
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `dynamic` [ RunTime:0.0063s ]
+SQL: 
+            SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
+            FROM `dynamic` `d`
+            LEFT JOIN `user` ON `user`.`id` = `d`.`u_id`
+            LEFT JOIN `img` ON `d`.`id` = `img`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `comment`
+                GROUP BY `d_id`
+            ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
+            LEFT JOIN (
+                SELECT `d_id`, count(`id`) `num`
+                FROM `dynamic_like`
+                GROUP BY `d_id`
+            ) `dynamic_like_num` ON `d`.`id` = `dynamic_like_num`.`d_id`
+            LEFT JOIN (
+                SELECT `id` `is`, `d_id`
+                FROM `dynamic_like`
+                WHERE `u_id` = 0
+            ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
+            WHERE `d`.`id` = 309;
+         [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE ( d_id = "309" )  [ RunTime:0.0002s ]
+

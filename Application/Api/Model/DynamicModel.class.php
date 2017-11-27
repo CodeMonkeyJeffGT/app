@@ -3,7 +3,7 @@ namespace Api\Model;
 use Think\Model;
 class DynamicModel extends Model {
 
-    public function listDynamics($u_id, $last_id, $limit = 20)
+    public function listDynamics($last_id, $limit = 20, $u_id = 0)
     {
         $offset = 0;
         $hasMore = 1;
@@ -138,7 +138,8 @@ class DynamicModel extends Model {
             }
             $dynamics[$i]['pubTime'] = $tmpPubTime;
 
-            $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 30);
+            $dynamics[$i]['content'] = base64_decode($dynamics[$i]['content']);
+            $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 100);
             $dynamics[$i]['isWhole'] = ($dynamics[$i]['brief'] == $dynamics[$i]['content']) ? 1 : 0;
             unset($dynamics[$i]['content']);
 
@@ -160,7 +161,7 @@ class DynamicModel extends Model {
     //         ->select();
     // }
      
-    public function getDynamic($u_id, $id)
+    public function getDynamic($id, $u_id = 0)
     {
         $sql = '
             SELECT `d`.`id` `id`, `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `d`.`content`, `img`.`id` `img_id`, `img`.`url` `img_url`, `d`.`pub_time` `pub_time`, `comment_num`.`num` `comment_num`, `dynamic_like_num`.`num` `like_num`, `is_like_tab`.`is` `is_like`
@@ -233,6 +234,7 @@ class DynamicModel extends Model {
         }
         $dynamic['pubTime'] = $tmpPubTime;
         $dynamic['isLike'] = empty($dynamic['isLike']) ? 0 : 1;
+        $dynamic['content'] = base64_decode($dynamic['content']);
 
         return $dynamic;
     }

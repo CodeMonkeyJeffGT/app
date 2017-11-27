@@ -5,19 +5,13 @@ class UsersController extends ApiController {
 
     private $users;
 
-    public function __construct()
+    public function index()
     {
-        parent::__construct();
-
         if( ! $this->checkToken())
         {
             $this->goLogin();
         }
         $this->users = D('user');
-    }
-
-    public function index()
-    {
 
     	switch ($this->_method)
         {

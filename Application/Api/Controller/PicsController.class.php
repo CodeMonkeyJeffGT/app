@@ -3,14 +3,12 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class PicsController extends ApiController {
 
-    public function index($id = 0)
+    public function index()
     {
     	switch ($this->_method)
         {
-            case 'get':
-                break;
-            
             case 'post':
+
                 break;
             
             case 'delete':
@@ -24,5 +22,28 @@ class PicsController extends ApiController {
                 ));
                 break;
         }
+    }
+
+    private function send_error($code)
+    {
+        switch (variable) {
+            case 'value':
+                # code...
+                break;
+            
+            default:
+                # code...
+                break;
+        }
+
+        '上传成功',
+        '超过服务器大小限制',
+        '超过浏览器大小限制',
+        '文件残缺',
+        '没找到要上传的文件',
+        '',
+        '服务器临时文件夹丢失',
+        '写入临时文件出错 ',
+        'PHP错误导致上传中断'
     }
 }

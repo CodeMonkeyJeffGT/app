@@ -43,6 +43,7 @@ class ApiController extends RestController {
                 break;
         }
         //利用checkToken方法填充header和payload
+        $this->checkToken();
     }
 
     protected function checkToken()

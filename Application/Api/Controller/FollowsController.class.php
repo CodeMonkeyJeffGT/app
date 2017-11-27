@@ -3,7 +3,7 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class FollowsController extends ApiController {
 
-    public function index($id = 0)
+    public function index()
     {
     	switch ($this->_method)
         {

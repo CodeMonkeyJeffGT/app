@@ -3,7 +3,9 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class CommentsController extends ApiController {
 
-    public function index($id = 0)
+    private $comment;
+
+    public function index()
     {
         if(empty($this->id))
         {
@@ -13,6 +15,9 @@ class CommentsController extends ApiController {
                 'data'    => null
             ));
         }
+
+        $this->comment = D('comment');
+
         switch ($this->_method)
         {
             case 'get':
@@ -20,11 +25,13 @@ class CommentsController extends ApiController {
                 break;
             
             case 'post':
-                $this->pubComment($this->id, $this->data);
+                $u_id = $this->payload['user']['id'];
+                $this->pubComment($this->id, $u_id, $this->data);
                 break;
             
             case 'delete':
-                $this->delComment($this->id);
+                $u_id = $this->payload['user']['id'];
+                $this->delComment($this->id, $u_id);
                 break;
             
             default:
@@ -38,7 +45,18 @@ class CommentsController extends ApiController {
     }
 
     private function listComment($d_id){
-        $comments = D('comment')->listComment($d_id);
+        if(is_null(D('dynamic')->getDynamic($d_id)))
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该条动态不存在',
+                'data'    => false
+            ));
+        }
+        $comments = $this->comment->listComment($d_id);
+        foreach ($comments as $key => $value) {
+            $comments[$key]['content'] = base64_decode($value['content']);
+        }
         $this->restReturn(array(
             'code'    => 0,
             'message' => '评论列表',
@@ -46,7 +64,7 @@ class CommentsController extends ApiController {
         ));
     }
 
-    private function pubComment($d_id, $data){
+    private function pubComment($d_id, $u_id, $data){
         if(is_null(D('dynamic')->getDynamic($d_id)))
         {
             $this->restReturn(array(
@@ -63,7 +81,7 @@ class CommentsController extends ApiController {
                 'data'    => false
             ));
         }
-        if(empty($data['p_comment']) || is_null(D('comment')->getComment($data['p_comment'])))
+        if( ! empty($data['p_comment']) && is_null($this->comment->getComment($data['p_comment'])))
         {
             $this->restReturn(array(
                 'code'    => 1,
@@ -71,11 +89,14 @@ class CommentsController extends ApiController {
                 'data'    => false
             ));
         }
-        $comment = M('comment')->add(array(
-            'd_id'    => $d_id,
-            'u_id'    => $this->payload['user']['id'],
-            'content' => $data['content'],
-            'p_id'    => $data['p_content']
+        if(empty($data['p_comment']))
+            $data['p_comment'] = 0;
+        $comment = $this->comment->add(array(
+            'd_id'     => $d_id,
+            'u_id'     => $u_id,
+            'content'  => base64_encode($data['content']),
+            'p_id'     => $data['p_comment'],
+            'pub_time' => time()
         ));
         $this->restReturn(array(
             'code'    => 0,
@@ -84,9 +105,9 @@ class CommentsController extends ApiController {
         ));
     }
 
-    private function delComment($id){
-        $comment = D('comment')->getComment($id);
-        if(is_null($comment) || $comment['u_id'] != $this->payload['user']['id'])
+    private function delComment($id, $u_id){
+        $comment = $this->comment->getComment($id);
+        if(is_null($comment))
         {
             $this->restReturn(array(
                 'code'    => 1,
@@ -94,7 +115,23 @@ class CommentsController extends ApiController {
                 'data'    => false
             ));
         }
-        M('comment')->where('id = %d', $id)
+        if($comment['u_id'] == 0)
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '该评论已被删除',
+                'data'    => false
+            ));
+        }
+        if($comment['u_id'] != $this->payload['user']['id'])
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '您不是该评论的发布者',
+                'data'    => false
+            ));
+        }
+        $this->comment->where('id = %d', $id)
             ->save(array(
                 'content' => '--此评论已被删除--',
                 'u_id'    => 0
