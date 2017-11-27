@@ -45,7 +45,7 @@ class CommentsController extends ApiController {
     }
 
     private function listComment($d_id){
-        if(is_null(D('dynamic')->getDynamic($d_id)))
+        if(empty(D('dynamic')->getDynamic($d_id)))
         {
             $this->restReturn(array(
                 'code'    => 1,

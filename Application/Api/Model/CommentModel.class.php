@@ -33,6 +33,7 @@ class CommentModel extends Model {
         for($i = 0, $len = count($comments); $i < $len; $i++)
         {
             $comments[$i]['isLike'] = empty($comments[$i]['isLike']) ? 0 : 1;
+            $comments[$i]['pubTime'] = date('m-d H:i', $comments[$i]['pubTime']);
         }
         return $comments;
     }
