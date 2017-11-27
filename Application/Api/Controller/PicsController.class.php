@@ -3,15 +3,23 @@ namespace Api\Controller;
 use Api\Common\ApiController;
 class PicsController extends ApiController {
 
+    private $pics;
+
     public function index()
     {
+        if( ! $this->checkToken())
+            $this->goLogin();
+
+        $this->pics = D('img');
+
     	switch ($this->_method)
         {
             case 'post':
-
+                $this->upload($this->payload['user']['id']);
                 break;
             
             case 'delete':
+                $this->unlinkPic($this->id, $this->payload['user']['id']);
                 break;
             
             default:
@@ -24,26 +32,71 @@ class PicsController extends ApiController {
         }
     }
 
-    private function send_error($code)
+    private function upload($id)
     {
-        switch (variable) {
-            case 'value':
-                # code...
-                break;
-            
-            default:
-                # code...
-                break;
+        $config = array(
+            'maxSize'    =>    3145728,
+            'rootPath'   =>    './img/',
+            'savePath'   =>    '',
+            'saveName'   =>    array('uniqid',''),
+            'exts'       =>    array('jpg', 'gif', 'png', 'jpeg'),
+            'autoSub'    =>    true,
+            'subName'    =>    array('date','Ymd'),
+        );
+        $upload = new \Think\Upload($config);// 实例化上传类
+        // 上传文件 
+        $info = $upload->upload();
+        if($upload->getError()) {// 上传错误提示错误信息
+            unlink('./img/' . current($info)['savepath'] . current($info)['savename']);
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => $upload->getError(),
+                'data'    => null
+            ));
+        }else{// 上传成功 获取上传文件信息
+            $pic = '/img/' . current($info)['savepath'] . current($info)['savename'];
+            $picInfo = $this->pics->insPic($id, $pic);
+            $this->restReturn(array(
+                'code'    => 0,
+                'message' => '上传成功',
+                'data'    => $picInfo
+            ));
         }
+    }
 
-        '上传成功',
-        '超过服务器大小限制',
-        '超过浏览器大小限制',
-        '文件残缺',
-        '没找到要上传的文件',
-        '',
-        '服务器临时文件夹丢失',
-        '写入临时文件出错 ',
-        'PHP错误导致上传中断'
+    private function unlinkPic($id, $u_id)
+    {
+        if(empty($id))
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '请选择图片',
+                'data'    => null
+            ));
+        }
+        $pic = $this->pics->find($id);
+        if(is_null($pic))
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '图片不存在',
+                'data'    => null
+            ));
+        }
+        if($pic['u_id'] != $u_id)
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '请勿删除他人的图片',
+                'data'    => null
+            ));
+        }
+        unlink('.' . $pic['url']);
+        $this->pics->delete($id);
+        $this->restReturn(array(
+            'code'    => 0,
+            'message' => '删除成功',
+            'data'    => null
+        ));
     }
 }
