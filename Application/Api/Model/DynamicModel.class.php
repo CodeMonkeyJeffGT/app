@@ -20,6 +20,7 @@ class DynamicModel extends Model {
             LEFT JOIN (
                 SELECT `d_id`, count(`id`) `num`
                 FROM `comment`
+                WHERE `comment`.`u_id` <> 0
                 GROUP BY `d_id`
             ) `comment_num` ON `d`.`id` = `comment_num`.`d_id`
             LEFT JOIN (
@@ -140,6 +141,12 @@ class DynamicModel extends Model {
 
             $dynamics[$i]['content'] = base64_decode($dynamics[$i]['content']);
             $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 100);
+            if(substr_count($dynamics[$i]['brief'], "\n") > 5)
+            {
+                $brief = explode("\n", $dynamics[$i]['brief']);
+                $brief = array_slice($brief, 0, 5);
+                $dynamics[$i]['brief'] = implode("\n", $brief);
+            }
             $dynamics[$i]['isWhole'] = ($dynamics[$i]['brief'] == $dynamics[$i]['content']) ? 1 : 0;
             unset($dynamics[$i]['content']);
 

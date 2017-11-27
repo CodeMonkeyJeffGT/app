@@ -175,11 +175,6 @@ class DynamicsController extends ApiController {
         ));
     }
 
-    // private function edit($id, $data)
-    // {
-    // }
-
-
     private function delete($id)
     {
         if($id == 0)
