@@ -53,7 +53,8 @@ class CommentsController extends ApiController {
                 'data'    => false
             ));
         }
-        $comments = $this->comment->listComment($d_id);
+        $u_id = $this->checkToken() ? $this->payload['user']['id'] : 0;
+        $comments = $this->comment->listComment($d_id, $u_id);
         foreach ($comments as $key => $value) {
             $comments[$key]['content'] = base64_decode($value['content']);
         }

@@ -414,6 +414,7 @@
             "nickname": "用户昵称",
             "content": "评论内容",
             "pubTime": "评论时间"
+            "pCUId": "父级评论用户id" ,
             "pCNickname": "父级评论昵称" ,
             "likeNum": 2,
             "isLike": true

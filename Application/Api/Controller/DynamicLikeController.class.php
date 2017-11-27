@@ -5,11 +5,8 @@ class DynamicLikeController extends ApiController {
 
     private $dynamicLike;
 
-
     public function index()
     {
-        if( ! $this->checkToken())
-            $this->goLogin();
         if(empty($this->id))
             $this->restReturn(array(
                 'code'    => 1,
@@ -29,11 +26,19 @@ class DynamicLikeController extends ApiController {
 
     	switch ($this->_method)
     	{
+            case 'get':
+                $this->list($this->id);
+                break;
+
     		case 'post':
+                if( ! $this->checkToken())
+                    $this->goLogin();
                 $this->like($this->id, $u_id);
     			break;
 
             case 'delete':
+                if( ! $this->checkToken())
+                    $this->goLogin();
                 $this->unlike($this->id, $u_id);
                 break;
     		
@@ -45,6 +50,20 @@ class DynamicLikeController extends ApiController {
     			));
     			break;
     	}
+    }
+
+    private function list($id)
+    {
+        $likes = $this->dynamicLike->query('
+            SELECT `user`.`head_img_url` `head_img_url`, `user`.`id` `u_id`
+            FROM `dynamic_like`, `user`
+            WHERE `dynamic_like`.`d_id` = %d AND `dynamic_like`.`u_id` = `user`.`id`
+        ', $id);
+        $this->restReturn(array(
+            'code'    => 0,
+            'message' => '',
+            'data'    => $likes
+        ));
     }
 
     private function like($id, $u_id)

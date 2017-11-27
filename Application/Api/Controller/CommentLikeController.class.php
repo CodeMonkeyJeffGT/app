@@ -1,105 +1,93 @@
 <?php
 namespace Api\Controller;
 use Api\Common\ApiController;
-class CommentsController extends ApiController {
+class CommentLikeController extends ApiController {
 
-    public function index($id = 0)
+    private $commentLike;
+
+    public function index()
     {
+        if( ! $this->checkToken())
+            $this->goLogin();
         if(empty($this->id))
             $this->restReturn(array(
                 'code'    => 1,
-                'message' => '请指定操作id',
+                'message' => '未指定评论',
                 'data'    => null
             ));
-    	switch ($this->_method)
-    	{
-            case 'get':
-                $this->listComment($this->id);
-                break;
-            
+        $comment = M('comment')->where('u_id <> 0')->find($this->id);
+        if(is_null($comment))
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '评论不存在或已被删除',
+                'data'    => false
+            ));
+
+        $this->commentLike = M('comment_like');
+        $u_id = $this->payload['user']['id'];
+
+        switch ($this->_method)
+        {
             case 'post':
-                $this->pubComment($this->id, $this->data);
+                $this->like($this->id, $u_id);
                 break;
-            
+
             case 'delete':
-                $this->delComment($this->id);
+                $this->unlike($this->id, $u_id);
                 break;
             
-    		default:
-    			$this->restReturn(array(
-					'code'    => 1,
-					'message' => '请求方式错误',
-					'data'    => null
-    			));
-    			break;
-    	}
+            default:
+                $this->restReturn(array(
+                    'code'    => 1,
+                    'message' => '请求方式错误',
+                    'data'    => null
+                ));
+                break;
+        }
     }
 
-    private function listComment($d_id){
-        $comments = D('comment')->listComment($d_id);
-        $this->restReturn(array(
-            'code'    => 0,
-            'message' => '评论列表',
-            'data'    => $comments
-        ));
-    }
+    private function like($id, $u_id)
+    {
+        $isset = $this->commentLike->where('c_id = %d AND u_id = %d', $id, $u_id)->count();
+        if($isset)
+        {
+            $this->restReturn(array(
+                'code'    => 1,
+                'message' => '请勿重复点赞',
+                'data'    => null
+            ));
+        }
 
-    private function pubComment($d_id, $data){
-        if(is_null(D('dynamic')->getDynamic($d_id)))
-        {
-            $this->restReturn(array(
-                'code'    => 1,
-                'message' => '该条动态不存在',
-                'data'    => false
-            ));
-        }
-        if(empty($data['content']))
-        {
-            $this->restReturn(array(
-                'code'    => 1,
-                'message' => '评论内容不能为空',
-                'data'    => false
-            ));
-        }
-        if(empty($data['p_comment']) || is_null(D('comment')->getComment($data['p_comment'])))
-        {
-            $this->restReturn(array(
-                'code'    => 1,
-                'message' => '该条评论不存在',
-                'data'    => false
-            ));
-        }
-        $comment = M('comment')->add(array(
-            'd_id'    => $d_id,
-            'u_id'    => $this->data['user']['id'],
-            'content' => $data['content'],
-            'p_id'    => $data['p_content']
+        $this->commentLike->add(array(
+            'c_id' => $id,
+            'u_id' => $u_id
         ));
         $this->restReturn(array(
             'code'    => 0,
-            'message' => '评论成功',
-            'data'    => $comment
+            'message' => '点赞成功',
+            'data'    => true
         ));
     }
 
-    private function delComment($id){
-        $comment = D('comment')->getComment($id);
-        if(is_null($comment) || $comment['u_id'] != $this->payload['user']['id'])
+    private function unlike($id, $u_id)
+    {
+        $isset = $this->commentLike->where('c_id = %d AND u_id = %d', $id, $u_id)->count();
+        if( ! $isset)
         {
             $this->restReturn(array(
                 'code'    => 1,
-                'message' => '该条评论不存在',
-                'data'    => false
+                'message' => '您还未点赞',
+                'data'    => null
             ));
         }
-        M('comment')->where('id = %d', $d_id)
-            ->save(array(
-                'content' => '--此评论已被删除--',
-                'u_id'    => 0
-            ));
+        
+        $this->commentLike->where(array(
+            'c_id' => $id,
+            'u_id' => $u_id
+        ))->delete();
         $this->restReturn(array(
             'code'    => 0,
-            'message' => '删除成功',
+            'message' => '取消成功',
             'data'    => true
         ));
     }

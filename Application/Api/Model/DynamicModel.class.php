@@ -32,7 +32,7 @@ class DynamicModel extends Model {
                 FROM `dynamic_like`
                 WHERE `u_id` = %d
             ) is_like_tab ON `d`.`id` = `is_like_tab`.`d_id`
-            WHERE u_id <> 0' . ($last_id == 0 ? '' : ' AND `d`.`id` < %d AND `d`.`id` > %d') . '
+            WHERE `d`.`u_id` <> 0' . ($last_id == 0 ? '' : ' AND `d`.`id` < %d AND `d`.`id` > %d') . '
             ORDER BY `id` DESC
             ' . ($last_id == 0 ? 'LIMIT %d' : '') . '
         ';
