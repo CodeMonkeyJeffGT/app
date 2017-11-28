@@ -134,7 +134,7 @@ class CommentsController extends ApiController {
         }
         $this->comment->where('id = %d', $id)
             ->save(array(
-                'content' => '--此评论已被删除--',
+                'content' => base64_encode('--此评论已被删除--'),
                 'u_id'    => 0
             ));
         $this->restReturn(array(

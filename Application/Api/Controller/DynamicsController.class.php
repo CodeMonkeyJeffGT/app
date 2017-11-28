@@ -209,7 +209,7 @@ class DynamicsController extends ApiController {
 
         $this->dynamics->where('`id` = %d', $id)->save(array(
             'u_id'    => 0,
-            'content' => ''
+            'content' => base64_encode('--此动态已被删除--')
         ));
         M('img')->where('d_id = %d', $id)->delete();
 

@@ -55,10 +55,11 @@ class DynamicLikeController extends ApiController {
     private function list($id)
     {
         $likes = $this->dynamicLike->query('
-            SELECT `user`.`head_img_url` `head_img_url`, `user`.`id` `u_id`
+            SELECT `user`.`head_img_url` `head_img_url`, `user`.`nickname` `nickname`, `user`.`id` `id`
             FROM `dynamic_like`, `user`
             WHERE `dynamic_like`.`d_id` = %d AND `dynamic_like`.`u_id` = `user`.`id`
         ', $id);
+        $likes = line_to_up($likes);
         $this->restReturn(array(
             'code'    => 0,
             'message' => '',
