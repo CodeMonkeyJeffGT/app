@@ -24,7 +24,7 @@ class FollowModel extends Model {
 			$sort[$key][] = $followers[$i];
 		}
 
-		return $followers;
+		return $sort;
 	}
 
 	private function _getFirstCharter($str){  
