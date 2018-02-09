@@ -79,7 +79,7 @@ class FollowsController extends ApiController {
                 'data'    => null, 
             ));
         }
-        $this->add(array(
+        $this->follow->add(array(
             'u_id' => $u_id,
             'f_id' => $id
         ));
@@ -112,7 +112,7 @@ class FollowsController extends ApiController {
                 'data'    => null, 
             ));
         }
-        $this->where(array(
+        $this->follow->where(array(
             'u_id' => $u_id,
             'f_id' => $id
         ))->delete();
