@@ -6,7 +6,7 @@ class FollowModel extends Model {
 	public function listFollow($id)
 	{
 		$sql = '
-			SELECT `id`, `nickname`, `head_img_url`
+			SELECT `user`.`id`, `nickname`, `head_img_url`
 			FROM `follow`, `user`
 			WHERE `f_id` = %d AND `user`.`id` = `u_id`
 		';
