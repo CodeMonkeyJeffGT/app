@@ -32,7 +32,7 @@ class FollowModel extends Model {
 			return '#';
 		}  
 		$fchar = ord($str{0});  
-		if ($fchar >= ord('A') && $fchar<=ord('z')) {
+		if (($fchar >= ord('A') && $fchar<=ord('Z')) || ($fchar >= ord('a') && $fchar<=ord('z'))) {
 			return strtoupper($str{0});
 		}
 		$s1 = iconv('UTF-8', 'gb2312', $str);  
