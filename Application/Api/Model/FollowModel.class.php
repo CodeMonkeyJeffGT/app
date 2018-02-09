@@ -11,6 +11,18 @@ class FollowModel extends Model {
 			WHERE `f_id` = %d AND `user`.`id` = `u_id`
 		';
 		$followers = $this->query($sql, $id);
+		$followers = line_to_up($followers);
+
+		$sort = array();
+		for($i = 0, $len = count($followers); $i < $len; $i++)
+		{
+			$key = $this->_getFirstCharter($followers[$i]['nickname']);
+			if( ! isset($sort[$key]))
+			{
+				$sort[$key] = array();
+			}
+			$sort[$key][] = $followers[$i];
+		}
 
 		return $followers;
 	}
