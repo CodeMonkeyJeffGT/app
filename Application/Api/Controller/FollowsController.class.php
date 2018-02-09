@@ -42,7 +42,7 @@ class FollowsController extends ApiController {
                     'code'    => 1,
                     'message' => '请求方式错误',
                     'data'    => null
-                ));=
+                ));
                 break;
         }
     }
