@@ -47,7 +47,7 @@ class FollowsController extends ApiController {
         }
     }
 
-    private function listFollow($id)
+    private function listFollows($id)
     {
         $follow = $this->follow->listFollow($id);
         $this->restReturn(array(
