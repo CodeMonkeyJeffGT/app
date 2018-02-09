@@ -6,9 +6,9 @@ class FollowModel extends Model {
 	public function listFollow($id)
 	{
 		$sql = '
-			SELECT `u_id`
-			FROM `follow`
-			WHERE `f_id` = %d
+			SELECT `id`, `nickname`, `head_img_url`
+			FROM `follow`, `user`
+			WHERE `f_id` = %d AND `user`.`id` = `u_id`
 		';
 		$followers = $this->query($sql, $id);
 
