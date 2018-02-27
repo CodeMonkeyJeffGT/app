@@ -129,26 +129,4 @@ class ApiController extends RestController {
     	$this->response($data, $this->_type);
     }
 
-    // public function __destruct()
-    // {
-    //     if($this->send_token && ! empty($this->payload))
-    //     {
-    //         //生成token并放入header
-    //         if(empty($this->header))
-    //         {
-    //             $this->header = array(
-    //                 'typ' => 'JWT',
-    //                 'alg' => 'HS256'
-    //             );
-    //         }
-    //         $this->payload['expire'] = time() + $this->expire_dor;
-    //         $this->header            = base64_encode(json_encode($this->header));
-    //         $this->payload           = base64_encode(json_encode($this->payload));
-    //         $prev                    = $this->header . '.' . $this->payload;
-    //         $signature = hash_hmac('sha256', $prev, $this->secret);
-    //         header('HTTP_TOKEN:' . $prev . '.' . $signature);
-    //     }
-    //     parent::__destruct();
-    // }
-
 }

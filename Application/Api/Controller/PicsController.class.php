@@ -69,4 +69,34 @@ class PicsController extends ApiController {
     //     }
     //     if()
     // }
+    // 
+    private function uploadByBase64($img, $path, $name)
+    {
+        $base64_img = trim($img);
+ 
+        if( ! is_dir($path)){
+            mkdir($path, 0777);
+        }
+         
+        if(preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_img, $result)){
+            $type = $result[2];
+            if(in_array($type, array('pjpeg', 'jpeg', 'jpg', 'gif', 'bmp', 'png'))){
+                $new_file = $path . $name . '.' . $type;
+                if(file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_img)))){
+                    return true;
+                }else{
+                    return '图片上传失败';
+                }
+            }else{
+                return '图片上传类型错误';
+            }
+        }else{
+          return '文件错误';
+        }
+    }
+
+    private function uploadByFile($img, $path, $name)
+    {
+
+    }
 }
