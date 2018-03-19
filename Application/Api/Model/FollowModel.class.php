@@ -6,11 +6,16 @@ class FollowModel extends Model {
 	public function listFollow($id)
 	{
 		$sql = '
-			SELECT `user`.`id`, `nickname`, `head_img_url`
+			SELECT distinct `user`.`id`, `nickname`, `head_img_url`
 			FROM `follow`, `user`
-			WHERE `f_id` = %d AND `user`.`id` = `u_id`
+			WHERE (`f_id` = %d OR `u_id` = %d) AND `user`.`id` = `f_id`
 		';
-		$followers = $this->query($sql, $id);
+		$sql = '
+			SELECT `id`, `nickname`, `head_img_url`
+			FROM `user`;
+		';
+		//$followers = $this->query($sql, $id, $id);
+		$followers = $this->query($sql);
 		$followers = line_to_up($followers);
 
 		$sort = array();
