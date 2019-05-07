@@ -167,7 +167,7 @@ class DynamicModel extends Model {
     //         ->limit((int)$limit)
     //         ->select();
     // }
-     
+
     public function getDynamic($id, $u_id = 0)
     {
         $sql = '
@@ -240,6 +240,7 @@ class DynamicModel extends Model {
             $tmpPubTime = substr($tmpPubTime, 2);
         }
         $dynamic['pubTime'] = $tmpPubTime;
+        $dynamic['rawPubTime'] = $tmpTime;
         $dynamic['isLike'] = empty($dynamic['isLike']) ? 0 : 1;
         $dynamic['content'] = base64_decode($dynamic['content']);
 
