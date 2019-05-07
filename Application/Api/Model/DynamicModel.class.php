@@ -138,7 +138,7 @@ class DynamicModel extends Model {
                 $tmpPubTime = substr($tmpPubTime, 2);
             }
             $dynamics[$i]['pubTime'] = $tmpPubTime;
-
+            $dynamic[$i]['rawPubTime'] = $tmpTime;
             $dynamics[$i]['content'] = base64_decode($dynamics[$i]['content']);
             $dynamics[$i]['brief'] = mb_substr($dynamics[$i]['content'], 0, 100);
             if(substr_count($dynamics[$i]['brief'], "\n") > 5)

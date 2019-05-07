@@ -59,7 +59,7 @@ class UserControlController extends ApiController {
                 'data'    => false
             ));
         }
-        
+
         //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user['id'],
@@ -101,7 +101,17 @@ class UserControlController extends ApiController {
         }
         if(empty($data['headImgUrl']))
         {
-            $data['headImgUrl'] = '/headimg/default.jpg';
+            $avatars = array(
+                'https://s3.amazonaws.com/uifaces/faces/twitter/mhesslow/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/91bilal/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/saulihirvi/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/zforrester/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/markjenkins/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/souperphly/128.jpg',
+                'https://s3.amazonaws.com/uifaces/faces/twitter/ateneupopular/128.jpg',
+            );
+
+            $data['headImgUrl'] = $avatars[rand(0, count($avatars) - 1)];
         }
         $user = D('user')->getUser($data['username']);
         if( ! empty($user))
@@ -118,7 +128,7 @@ class UserControlController extends ApiController {
             'nickname'   => $data['nickname'],
             'head_img_url' => $data['headImgUrl'],
         ));
-        
+
         //存入payload以自动生成token
         $this->payload['user'] = array(
             'id'         => $user,
